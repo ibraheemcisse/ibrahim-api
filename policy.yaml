@@ -1,0 +1,6 @@
+PROJECT_ID=restful-api-424205
+SERVICE_ACCOUNT=33116753843-compute@developer.gserviceaccount.com
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+    --member=serviceAccount:$SERVICE_ACCOUNT \
+    --role=roles/artifactregistry.reader
