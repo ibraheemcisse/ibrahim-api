@@ -1,0 +1,8 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    npm install
+    gcloud functions deploy helloWorld --runtime nodejs18 --trigger-http --allow-unauthenticated --region us-central1 --project restful-api-424205
